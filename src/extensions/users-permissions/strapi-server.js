@@ -28,7 +28,11 @@ module.exports = (plugin) => {
       const users = await strapi.entityService.findMany(
         "plugin::users-permissions.user",
         {
-          populate: { role: true },
+          filters:ctx.query.filters,
+          populate: ctx.query.populate,
+          sort:ctx.query.sort,
+          start:ctx.query.start,
+          limit:ctx.query.limit,
         }
       );
       ctx.body = users.map((user) => sanitizeOutput(user));
@@ -41,7 +45,7 @@ module.exports = (plugin) => {
       const user = await strapi.entityService.findOne(
         "plugin::users-permissions.user",
         ctx.params[0].split('/')[2],
-        { populate: ["role"] }
+        { populate: ctx.query.populate }
       );
   
       ctx.body = sanitizeOutput(user);
