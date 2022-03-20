@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "up_users",
+  "collectionName": "users",
   "info": {
     "name": "user",
     "description": "",
