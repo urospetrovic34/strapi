@@ -14,5 +14,15 @@ module.exports = ({ env }) => ({
         },
       },
     },
+    email: {
+      config: {
+        provider: 'sendmail',
+        settings: {
+          defaultFrom: 'noreply@recipee.com',
+          defaultReplyTo: 'juliasedefdjian@strapi.io',
+          testAddress: 'nonamen31lead@gmail.com',
+        },
+      },
+    },
     // ...
   });

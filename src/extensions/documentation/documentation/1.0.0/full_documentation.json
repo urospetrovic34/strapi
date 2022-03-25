@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-03-20T15:23:06.031Z"
+    "x-generation-date": "2022-03-25T08:51:20.674Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3651,6 +3651,12 @@
                                                                         }
                                                                       }
                                                                     },
+                                                                    "name": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "surname": {
+                                                                      "type": "string"
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -6262,6 +6268,12 @@
                                                                       }
                                                                     }
                                                                   },
+                                                                  "name": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "surname": {
+                                                                    "type": "string"
+                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -8792,6 +8804,12 @@
                                                                       }
                                                                     }
                                                                   },
+                                                                  "name": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "surname": {
+                                                                    "type": "string"
+                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -11312,6 +11330,12 @@
                                                                       }
                                                                     }
                                                                   },
+                                                                  "name": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "surname": {
+                                                                    "type": "string"
+                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -13742,6 +13766,12 @@
                                                                             }
                                                                           }
                                                                         }
+                                                                      },
+                                                                      "name": {
+                                                                        "type": "string"
+                                                                      },
+                                                                      "surname": {
+                                                                        "type": "string"
                                                                       },
                                                                       "createdAt": {
                                                                         "type": "string",
@@ -16340,6 +16370,12 @@
                                                                         }
                                                                       }
                                                                     },
+                                                                    "name": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "surname": {
+                                                                      "type": "string"
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -18856,6 +18892,12 @@
                                                                         }
                                                                       }
                                                                     },
+                                                                    "name": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "surname": {
+                                                                      "type": "string"
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -21361,6 +21403,12 @@
                                                                           }
                                                                         }
                                                                       }
+                                                                    },
+                                                                    "name": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "surname": {
+                                                                      "type": "string"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",
