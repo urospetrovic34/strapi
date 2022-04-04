@@ -1295,6 +1295,9 @@
                                                                     "surname": {
                                                                       "type": "string"
                                                                     },
+                                                                    "fullName": {
+                                                                      "type": "string"
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -3912,6 +3915,9 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
+                                                                  "fullName": {
+                                                                    "type": "string"
+                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -6448,6 +6454,9 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
+                                                                  "fullName": {
+                                                                    "type": "string"
+                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -8972,6 +8981,9 @@
                                                                     "type": "string"
                                                                   },
                                                                   "surname": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "fullName": {
                                                                     "type": "string"
                                                                   },
                                                                   "createdAt": {
