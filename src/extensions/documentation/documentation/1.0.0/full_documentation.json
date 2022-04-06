@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-04-04T09:42:29.810Z"
+    "x-generation-date": "2022-04-04T09:53:40.878Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3657,9 +3657,6 @@
                                                                     "surname": {
                                                                       "type": "string"
                                                                     },
-                                                                    "fullName": {
-                                                                      "type": "string"
-                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -6277,9 +6274,6 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
-                                                                  "fullName": {
-                                                                    "type": "string"
-                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -8816,9 +8810,6 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
-                                                                  "fullName": {
-                                                                    "type": "string"
-                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -11345,9 +11336,6 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
-                                                                  "fullName": {
-                                                                    "type": "string"
-                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -13783,9 +13771,6 @@
                                                                         "type": "string"
                                                                       },
                                                                       "surname": {
-                                                                        "type": "string"
-                                                                      },
-                                                                      "fullName": {
                                                                         "type": "string"
                                                                       },
                                                                       "createdAt": {
@@ -16391,9 +16376,6 @@
                                                                     "surname": {
                                                                       "type": "string"
                                                                     },
-                                                                    "fullName": {
-                                                                      "type": "string"
-                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -18916,9 +18898,6 @@
                                                                     "surname": {
                                                                       "type": "string"
                                                                     },
-                                                                    "fullName": {
-                                                                      "type": "string"
-                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -21429,9 +21408,6 @@
                                                                       "type": "string"
                                                                     },
                                                                     "surname": {
-                                                                      "type": "string"
-                                                                    },
-                                                                    "fullName": {
                                                                       "type": "string"
                                                                     },
                                                                     "createdAt": {
