@@ -49,6 +49,6 @@ module.exports = (plugin) => {
 
     ctx.body = sanitizeOutput(user);
   };
-
+  //comment
   return plugin;
 };
