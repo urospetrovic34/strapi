@@ -1295,7 +1295,7 @@
                                                                     "surname": {
                                                                       "type": "string"
                                                                     },
-                                                                    "fullName": {
+                                                                    "description": {
                                                                       "type": "string"
                                                                     },
                                                                     "createdAt": {
@@ -3915,7 +3915,7 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
-                                                                  "fullName": {
+                                                                  "description": {
                                                                     "type": "string"
                                                                   },
                                                                   "createdAt": {
@@ -6454,7 +6454,7 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
-                                                                  "fullName": {
+                                                                  "description": {
                                                                     "type": "string"
                                                                   },
                                                                   "createdAt": {
@@ -8983,7 +8983,7 @@
                                                                   "surname": {
                                                                     "type": "string"
                                                                   },
-                                                                  "fullName": {
+                                                                  "description": {
                                                                     "type": "string"
                                                                   },
                                                                   "createdAt": {

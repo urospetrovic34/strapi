@@ -85,9 +85,8 @@
       "type": "string",
       "required": true
     },
-    "fullName": {
-      "type": "string",
-      "required": true
+    "description": {
+      "type": "string"
     }
   }
 }
