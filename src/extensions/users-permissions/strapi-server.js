@@ -36,7 +36,6 @@ module.exports = (plugin) => {
     );
     ctx.body = users.map((user) => sanitizeOutput(user));
   };
-  //comment
   plugin.controllers.user.findOne = async (ctx) => {
     if (!ctx.state.user) {
       return ctx.unauthorized();
@@ -49,6 +48,21 @@ module.exports = (plugin) => {
 
     ctx.body = sanitizeOutput(user);
   };
-  //comment
+  plugin.controllers.auth["refreshToken"] = async (ctx) => {
+    const { token } = ctx.request.body;
+    const payload =
+      strapi.plugins["users-permissions"].services.jwt.verify(token);
+    return strapi.plugins["users-permissions"].services.jwt.issue({
+      id: payload.id,
+    });
+  };
+  plugin.routes["content-api"].routes.push({
+    method: "POST",
+    path: "/auth/refreshToken",
+    handler: "auth.refreshToken",
+    config: {
+      prefix: "",
+    },
+  });
   return plugin;
 };
