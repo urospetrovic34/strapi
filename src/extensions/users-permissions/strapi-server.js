@@ -56,6 +56,7 @@ module.exports = (plugin) => {
       id: payload.id,
     });
   };
+  //comment
   plugin.routes["content-api"].routes.push({
     method: "POST",
     path: "/auth/refreshToken",
