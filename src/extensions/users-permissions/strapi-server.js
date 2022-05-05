@@ -1,3 +1,21 @@
+const jwt = require("@strapi/plugin-users-permissions/server/services/jwt");
+
+const verifyRefresh = (token) => {
+  return new Promise(function (resolve, reject) {
+    jwt.verify(
+      token,
+      strapi.config.get("plugin.users-permissions.jwtSecret"),
+      { ignoreExpiration: true },
+      function (err, tokenPayload = {}) {
+        if (err) {
+          return reject(new Error("Invalid token."));
+        }
+        resolve(tokenPayload);
+      }
+    );
+  });
+};
+
 module.exports = (plugin) => {
   const sanitizeOutput = (user) => {
     const {
@@ -16,7 +34,7 @@ module.exports = (plugin) => {
     const user = await strapi.entityService.findOne(
       "plugin::users-permissions.user",
       ctx.state.user.id,
-      { populate: ["role","avatar"] }
+      { populate: "*" }
     );
 
     ctx.body = sanitizeOutput(user);
@@ -48,10 +66,10 @@ module.exports = (plugin) => {
 
     ctx.body = sanitizeOutput(user);
   };
+
   plugin.controllers.auth["refreshToken"] = async (ctx) => {
     const { token } = ctx.request.body;
-    const payload =
-      strapi.plugins["users-permissions"].services.jwt.verify(token);
+    const payload = await verifyRefresh(token);
     return strapi.plugins["users-permissions"].services.jwt.issue({
       id: payload.id,
     });
@@ -64,6 +82,7 @@ module.exports = (plugin) => {
     handler: "auth.refreshToken",
     config: {
       prefix: "",
+      policies: [],
     },
   });
   return plugin;
