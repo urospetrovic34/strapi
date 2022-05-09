@@ -41,7 +41,16 @@ module.exports = (plugin) => {
   };
 
   plugin.controllers.user.find = async (ctx) => {
-    console.log(ctx.query.filters);
+    const total = await strapi
+      .plugin("users-permissions")
+      .service("user")
+      .count();
+    const pageSize = (ctx.query.limit ? ctx.query.limit : 25)
+    const pageCount = Math.ceil(
+      total / pageSize
+    );
+    const page = (ctx.query.start ? (Math.ceil(++ctx.query.start / pageSize)) : 1)
+    const meta = {pagination:{page, total, pageCount,pageSize }};
     const users = await strapi.entityService.findMany(
       "plugin::users-permissions.user",
       {
@@ -52,7 +61,8 @@ module.exports = (plugin) => {
         limit: ctx.query.limit,
       }
     );
-    ctx.body = users.map((user) => sanitizeOutput(user));
+    const data = users.map((user) => sanitizeOutput(user));
+    ctx.body = { data, meta };
   };
   plugin.controllers.user.findOne = async (ctx) => {
     if (!ctx.state.user) {
