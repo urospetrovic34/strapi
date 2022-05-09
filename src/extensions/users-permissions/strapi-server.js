@@ -44,7 +44,7 @@ module.exports = (plugin) => {
     const total = await strapi
       .plugin("users-permissions")
       .service("user")
-      .count();
+      .count(ctx.query.filters);
     const pageSize = (ctx.query.limit ? ctx.query.limit : 25)
     const pageCount = Math.ceil(
       total / pageSize
