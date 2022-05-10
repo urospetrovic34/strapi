@@ -57,7 +57,7 @@ module.exports = (plugin) => {
         filters: ctx.query.filters,
         populate: ctx.query.populate,
         sort: ctx.query.sort,
-        start: ctx.query.start,
+        start: ctx.query.start * 8,
         limit: ctx.query.limit,
       }
     );
