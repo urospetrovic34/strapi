@@ -15,7 +15,7 @@ module.exports = createCoreController("api::project.project", ({ strapi }) => ({
         filters: ctx.query.filters,
         populate: ctx.query.populate,
         sort: ctx.query.sort,
-        start: meta.pagination.page * 8,
+        start: meta.pagination.page * 9,
         limit: meta.pagination.pageSize,
       }
     );
