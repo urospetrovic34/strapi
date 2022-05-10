@@ -49,7 +49,7 @@ module.exports = (plugin) => {
     const pageCount = Math.ceil(
       total / pageSize
     );
-    const page = (ctx.query.start ? (Math.ceil(++ctx.query.start / pageSize)) : 1)
+    const page = (ctx.query.start ? ((Math.ceil(ctx.query.start / pageSize))+1) : 1)
     const meta = {pagination:{page, total, pageCount,pageSize }};
     const users = await strapi.entityService.findMany(
       "plugin::users-permissions.user",
