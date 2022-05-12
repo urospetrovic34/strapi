@@ -21,4 +21,20 @@ module.exports = createCoreController("api::project.project", ({ strapi }) => ({
     );
     ctx.body = { projects, meta };
   },
+  async findOne(ctx) {
+    console.log(ctx.query.populate);
+    const data = await strapi.entityService.findOne(
+      "api::project.project",
+      ctx.url.split("/")[3],
+      {
+        populate: {
+            logo:true,
+            employees:{
+                populate:["avatar","role"]
+            }
+        },
+      }
+    );
+    ctx.body = { data };
+  },
 }));
