@@ -33,7 +33,7 @@ module.exports = createCoreController("api::project.project", ({ strapi }) => ({
                 populate:["avatar","role"]
             },
             notes:{
-                populate:["category","files","project"]
+                populate:["author","category","files","project"]
             }
         },
       }
